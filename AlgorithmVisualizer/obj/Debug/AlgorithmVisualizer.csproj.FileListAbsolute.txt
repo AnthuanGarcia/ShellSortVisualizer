@@ -1,0 +1,10 @@
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\bin\Debug\AlgorithmVisualizer.exe.config
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\bin\Debug\AlgorithmVisualizer.exe
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\bin\Debug\AlgorithmVisualizer.pdb
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.csprojAssemblyReference.cache
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.Form1.resources
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.Properties.Resources.resources
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.csproj.GenerateResource.cache
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.exe
+C:\Users\anthu\Documents\C#\AlgorithmVisualizer\AlgorithmVisualizer\obj\Debug\AlgorithmVisualizer.pdb
