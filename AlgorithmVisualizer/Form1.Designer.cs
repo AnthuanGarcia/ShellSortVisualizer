@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.txtDatos = new System.Windows.Forms.TextBox();
+            this.btnInvertir = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,11 +120,22 @@
             this.txtDatos.Text = "50";
             this.txtDatos.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnInvertir
+            // 
+            this.btnInvertir.Location = new System.Drawing.Point(437, 31);
+            this.btnInvertir.Name = "btnInvertir";
+            this.btnInvertir.Size = new System.Drawing.Size(92, 23);
+            this.btnInvertir.TabIndex = 7;
+            this.btnInvertir.Text = "Invertir";
+            this.btnInvertir.UseVisualStyleBackColor = true;
+            this.btnInvertir.Click += new System.EventHandler(this.btnInvertir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 505);
+            this.Controls.Add(this.btnInvertir);
             this.Controls.Add(this.txtDatos);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.panel1);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.TextBox txtDatos;
+        private System.Windows.Forms.Button btnInvertir;
     }
 }
 

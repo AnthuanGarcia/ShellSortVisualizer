@@ -27,7 +27,7 @@ namespace AlgorithmVisualizer
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,18 +43,41 @@ namespace AlgorithmVisualizer
             arreglo = new int[Nentradas];   // Arreglo
 
             // Instacia de graphics para crear los rectangulos
-            g.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.Black), 0, 0, panel1.Width, maxVal);
-            // Instnacia de Random para la generacion de datos
-            Random rand = new Random();
+            g.FillRectangle(new System.Drawing.SolidBrush(Color.FromArgb(255, 255, 255, 255)), 0, 0, panel1.Width, maxVal);
 
+            //Random rand = new Random();
+
+            //for (int i = 0; i < arreglo.Length; i++)
+            //    arreglo[i] = rand.Next(0, maxVal);
+
+            for (int i = 0; i < arreglo.Length; ++i)
+                arreglo[i] = i + 1;
+
+            Shuffle(arreglo);
+
+            int height = maxVal / arreglo.Length;
             for (int i = 0; i < arreglo.Length; i++)
-                arreglo[i] = rand.Next(0, maxVal);  //Llenado del vector con numeros aleatorios
-
-            for (int i = 1; i < arreglo.Length; i++)
             {
                 // Calculo de la coordenada x para colocar el sig. Rectangulo
                 int x = (int)(((double)panel1.Width / arreglo.Length) * i);
-                g.FillRectangle(new System.Drawing.SolidBrush(System.Drawing.Color.White), x, maxVal - arreglo[i], (panel1.Width / arreglo.Length) - 1, maxVal);
+
+                g.FillRectangle(new System.Drawing.SolidBrush(Color.FromArgb(255, 0, 0, 0)), x, maxVal - (arreglo[i] * height), (panel1.Width / arreglo.Length) - 1, maxVal);
+            }
+        }
+
+        public void Shuffle(int[] arr)
+        {
+            // Instnacia de Random para barajar los datos
+            Random rand = new Random();
+            int tmp;
+
+            for (int i = arr.Length; i > 1; i--)
+            {
+                int j = rand.Next(i);
+
+                tmp = arr[j];
+                arr[j] = arr[i - 1];
+                arr[i - 1] = tmp;
             }
         }
 
@@ -69,6 +92,26 @@ namespace AlgorithmVisualizer
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInvertir_Click(object sender, EventArgs e)
+        {
+            g = panel1.CreateGraphics();
+            int Nentradas = Convert.ToInt32(txtDatos.Text);
+            int maxVal = panel1.Height;
+            arreglo = new int[Nentradas];
+
+            g.FillRectangle(new System.Drawing.SolidBrush(Color.FromArgb(255, 255, 255, 255)), 0, 0, panel1.Width, maxVal);
+
+            for (int i = 0, j = arreglo.Length; i < arreglo.Length; ++i, j--)
+                arreglo[i] = j;
+
+            int height = maxVal / arreglo.Length;
+            for (int i = 0; i < arreglo.Length; i++)
+            {
+                int x = (int)(((double)panel1.Width / arreglo.Length) * i);
+                g.FillRectangle(new System.Drawing.SolidBrush(Color.FromArgb(255, 0, 0, 0)), x, maxVal - (arreglo[i] * height), (panel1.Width / arreglo.Length) - 1, maxVal);
+            }
         }
     }
 }
